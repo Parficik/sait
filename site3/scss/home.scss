@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$fontFamily: "Ubuntu", serif;
+$fontSize: 16px;
+
+
+$mainColor:rgb(120, 122, 128) ; 
+$yellow: rgb(255, 90, 48);
+$white: rgb(255, 255, 255);
+$black: rgb(30, 34, 45);
+
+// Стилі тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
+body {
+	font-weight: 400;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	color: $mainColor;
+}
+// Оболонка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+	// Притискаємо footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фікс для слайдерів
+	> * {
+		min-width: 0;
+	}
+}
+
+// // Брейк-поїнтами
+// [class*="__container"] {
+// 	max-width: 1260px;
+// 	padding: 0 15px;
+// 	margin: 0 auto;
+// }
+.container{
+	max-width: 1260px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.header{
+	padding-top: 10px;
+	&__logo{
+		
+		margin-right: 60px;
+	}
+	&__container{
+	padding-top: 13px;
+	display: flex;
+	//flex-direction: column;	
+	}
+	&__list{
+	display: flex;
+
+	column-gap: 40px;	
+	}
+	&__contacts{
+	display: flex;	
+	}
+}
+.phone{
+	display: flex;
+	
+	&__wrapper{
+		display: flex;
+		flex-direction: column;	
+		}
+	}
+
+.email{
+	margin-left: 40px;
+	display: flex;
+	&__wrapper{
+		/*margin-left: 40px;*/
+		display: flex;
+		flex-direction: column;	
+		
+	}
+	&__img{
+		display: block;
+		margin-right: 4px;
+
+	}
+}
+
+.menu{
+	margin-right: 170px;
+}
+.text__email{
+}
+// ======================================================================================================================================================================================================================================================
+
+
+
+
+.promo {
+padding-top: 232px;
+padding-bottom: 98px;
+	// .promo__container
+background: url('../img/promo-bg.jpeg') no-repeat center center;
+
+&__wrapper{
+	color:rgb(255, 255, 255) ;
+}
+	&__container {
+		
+		
+	}
+
+	// .promo__title
+
+	&__title {
+		max-width: 600px;
+	font-size: 72px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 1px;
+    text-align: left;
+	text-transform: uppercase;
+	&-orange{
+		color: $yellow;
+	}
+	}
+
+	// .promo__text
+
+	&__text {
+		margin-top: 29px;
+		font-size: 20px;
+	}
+
+
+}
+.container {
+}
+.select {
+	margin-top: 61px;
+	/*text-transform: uppercase;*/
+	display: flex;
+	
+		
+	
+	&__btn {
+		min-width: 252px;
+		
+		text-transform: uppercase;	
+		font-size: 16px;
+		
+		padding: 20px 40px;
+        margin-right: 40px;
+		border: 1px solid;
+		border-radius: 5px;
+		border-color: rgb(255, 255, 255);
+		}
+		&__btn:hover{
+			background-color: rgb(255, 90, 48);
+		}
+	}
+.skrol{
+	margin-top: 180px;
+	display: flex;
+	
+	&__nam{
+		
+		width: 172px;
+		margin-right: 5px;
+		text-align: left;
+		font-size: 28px;
+		&::after{
+			content: '';
+			margin-top: 5px;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		// border-bottom: 1px solid ;
+	}
+	&__nam:hover{
+		color: rgb(250, 171, 171);
+
+	}
+	&__nam:nth-child(1){
+		&::after{
+			background-color: rgba(255, 255, 255, 1);
+		}
+	}
+
+	
+
+}
+
+.video {
+	
+	// .video__container
+	&__container {
+	}
+	.name {
+
+		// .name__title
+	
+		&__title {
+			
+			width: 800px;
+			height: 60px;
+			color: rgb(30, 33, 44);
+            font-family: Ubuntu;
+            font-size: 46px;
+            font-weight: 700;
+			text-align: center;
+		}
+	
+		// .name__text
+	
+		&__text {
+			
+			width: 800px;
+			height: 60px;
+			color: rgb(120, 122, 128);
+			font-family: Ubuntu;
+			font-size: 18px;
+			font-weight: 400;	
+			text-align: center;
+		}
+	}
+		// .video__box
+		&__box {
+			background: url('../img/image-bg.jpeg');
+			width: 1230px;
+			height: 500px;
+			position: relative;
+		}
+
+	.box-video {
+
+			// .box-video__wrapper
+
+			&__wrapper {
+			}
+
+			// .box-video__play
+
+			&__play {
+				/*position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: 210px 575px;*/
+
+			}
+
+
+			// .box-video__play-btn
+
+			&__play-btn {
+				position: absolute;
+				top: 50%;
+				left: 10%;
+			}
+
+			// .box-video__mute
+
+			&__mute {
+			}
+
+			// .box-video__mute-btn
+
+			&__mute-btn {
+			}
+	}
+
+}
+
+
+
+
+
+
+
+
+	
+	
+
